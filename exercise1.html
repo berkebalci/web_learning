@@ -12,6 +12,7 @@
   }
   .satinalma{
     background-color: orange;
+    margin-bottom: 20px;
   
   }
 </style>
@@ -35,10 +36,44 @@ console.log('Loading');
 "> 
 Buy now
 </button>
-</body>
+<p>
+  <button onclick="
+    console.log(quantity);
+    ">
+      Show Quantity
+  </button>
+  <button onclick="
+  quantity++;
+  console.log(quantity);
+  ">
+    Add to Cart
+  </button>
+  <button onclick="
+  quantity += 2;
+  console.log(quantity);
+  ">
+    +2
+  </button>
+  <button onclick="
+  quantity += 3;
+  console.log(quantity);
+  ">
+    +3
+  </button>
+  <button onclick="
+  quantity = 0;
+  console.log(quantity);
+  ">
+    Reset Cart
+  </button>
+</p>
 
 
+<body>
 <script>
-
+let quantity = 5;
+console.log(quantity);
 </script>
+
+
 </html>
