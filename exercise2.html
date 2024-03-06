@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   
+  </style>
+</head>  
+<body>
+    <button onclick="
+    temporary += '1';
+    ">
+      1
+    </button>
+    <button onclick="
+    temporary += '2';
+    ">
+      2
+    </button>
+    <button onclick="
+    temporary += '3';
+    ">
+      3
+    </button>
+    <button onclick="
+    result += Number(temporary);
+    temporary = '';
+    ">
+      +
+    </button>
+    <button onclick="
+    result += Number(temporary);
+    console.log(`The result is : ${result}`);
+    
+    ">
+      =
+    </button>
+    <button onclick="
+    result = 0;
+    temporary = '';
+    ">
+      Reset
+    </button>
+  </body>
+  <script>
+    let temporary = "";
+    let result = 0;
+  </script>
+</html>
