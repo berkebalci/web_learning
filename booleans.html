@@ -1,0 +1,72 @@
+<html>
+<head>
+  <style>
+    .startButton{
+      background-color: yellow;
+      
+
+    }
+  </style>
+</head>
+<body>
+  <button class="startButton" onclick="
+  randomnumber = 0;
+  randomnumber = Math.random();
+     
+   computerMove='';
+  if(0 <= randomnumber < 0.3){
+    computerMove = 'Taş';
+    console.log(computerMove);
+  }
+  else if(0.3<=randomnumber<0.6){
+    computerMove = 'Kağıt';
+    console.log(computerMove);
+  }
+  else if(0.6<=randomnumber<1.0){
+    computerMove = 'Makas';
+    console.log(computerMove);
+  }
+  ">
+    Start
+  </button>
+  <button onclick="
+   personMove = 'Taş';
+   
+  ">
+    Taş
+  </button>
+  <button onclick="
+  personMove = 'Kağıt';
+  
+  ">
+    Kağıt
+  </button>
+  <button onclick="
+  personMove = 'Makas';
+  
+  ">
+    Makas
+  </button>
+  <button onclick="
+  if(personMove === computerMove){
+    console.log('Draw');}
+  else{
+    console.log('something else');
+  }  
+ 
+  ">
+    Sonuc
+  </button>
+</body>
+</html>
+
+
+
+<script>
+console.log(3 == '3');
+let personMove;
+let computerMove;
+let randomnumber;
+
+</script>
+
