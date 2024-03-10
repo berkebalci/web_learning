@@ -10,63 +10,102 @@
 </head>
 <body>
   <button class="startButton" onclick="
-  randomnumber = 0;
-  randomnumber = Math.random();
-     
-   computerMove='';
-  if(0 <= randomnumber < 0.3){
-    computerMove = 'Taş';
-    console.log(computerMove);
-  }
-  else if(0.3<=randomnumber<0.6){
-    computerMove = 'Kağıt';
-    console.log(computerMove);
-  }
-  else if(0.6<=randomnumber<1.0){
-    computerMove = 'Makas';
-    console.log(computerMove);
-  }
-  ">
-    Start
+    refresh();
+    ">
+   Restart
   </button>
   <button onclick="
    personMove = 'Taş';
+   checktheResult(computerMove,personMove);
    
   ">
     Taş
   </button>
   <button onclick="
   personMove = 'Kağıt';
-  
+  checktheResult(computerMove,personMove);
   ">
     Kağıt
   </button>
   <button onclick="
   personMove = 'Makas';
-  
+  checktheResult(computerMove,personMove);
   ">
     Makas
   </button>
-  <button onclick="
-  if(personMove === computerMove){
-    console.log('Draw');}
-  else{
-    console.log('something else');
-  }  
- 
-  ">
-    Sonuc
-  </button>
+  
 </body>
+<script>
+  console.log(3 == '3');
+  let personMove;
+  let computerMove;
+  let randomnumber;
+  
+  let b;
+  console.log(typeof b);
+  
+  
+  let value = 0 ? 'berke':'balci';
+  console.log(value);
+  
+  let value2 = false && '2';
+  console.log(value2);
+  
+  let value3 = false || 0;
+  console.log(`The value is : ${value3}`);
+  
+  
+  randomnumber = Math.random();
+  console.log(randomnumber);
+    let a = 0;    
+     computerMove='';
+    if(0 <= randomnumber < 0.3){
+      computerMove = 'Taş';
+      console.log(computerMove);
+    }
+    else if(0.3<=randomnumber<0.6){
+      computerMove = 'Kağıt';
+      console.log(computerMove);
+    }
+    else if(0.6<=randomnumber<1.0){
+      computerMove = 'Makas';
+      console.log(computerMove);
+     
+    }
+  
+  function checktheResult(computerMove, personMove){
+  
+    if(computerMove === personMove){
+      console.log('Draw');
+    }
+    else if(computerMove === 'Makas' && personMove === 'Kağıt'){
+      console.log('Computer has won');
+    }
+    else if(computerMove === 'Makas' && personMove === 'Taş'){
+      console.log('Person has won');
+    }
+    else if(computerMove === 'Kağıt' && personMove === 'Taş'){
+      console.log('Computer has won');
+    }
+    else if(computerMove === 'Kağıt' && personMove === 'Makas'){
+      console.log('Person has won');
+    }
+    else if(computerMove === 'Taş' && personMove === 'Kağıt'){
+      console.log('Person has won');
+  }
+    else if(computerMove === 'Taş' && personMove === 'Makas'){
+      console.log('Computer has won');
+    }
+  }
+  function refresh(){
+    location.reload();
+
+  }
+  </script>
+  
+  
 </html>
 
 
 
-<script>
-console.log(3 == '3');
-let personMove;
-let computerMove;
-let randomnumber;
-
-</script>
 
